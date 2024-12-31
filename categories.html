@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品分類</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css\categories.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">東部農產網</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        商品分類
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                        <a class="dropdown-item" href="categories.html#fruits">水果</a>
+                        <a class="dropdown-item" href="categories.html#vegetables">蔬菜</a>
+                        <a class="dropdown-item" href="categories.html#fish">魚類</a>
+                        <a class="dropdown-item" href="categories.html#farmingfish">養殖魚</a>
+                        <a class="dropdown-item" href="categories.html#processed">加工食品</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="activities.html">最新活動</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.html">購物車</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container my-5">
+        <!-- 水果 -->
+        <h3 id="fruits">水果</h3>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\釋迦.jpg" class="card-img-top" alt="釋迦">
+                    <div class="card-body">
+                        <h5 class="card-title">釋迦<span class="price">$116/一斤</span></h5>
+                        <p class="card-text">釋迦是台灣盛產的熱帶水果之一，擁有濃郁的甜味和香氣。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '釋迦內部果肉柔軟如奶油，含有豐富的維生素C及纖維質，是健康的首選。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-釋迦" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('釋迦', 116)">加入購物車</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\鳳梨釋迦.jpg" class="card-img-top" alt="鳳梨釋迦">
+                    <div class="card-body">
+                        <h5 class="card-title">鳳梨釋迦<span class="price">$116/一斤</span></h5>
+                        <p class="card-text">鳳梨釋迦是一種改良品種，擁有更高的甜度和特殊的口感。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '鳳梨釋迦外皮略呈黃綠色，果肉比普通釋迦更加紮實，口感香甜無比。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-鳳梨釋迦" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('鳳梨釋迦', 116)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\枇杷.jpeg" class="card-img-top" alt="枇杷">
+                    <div class="card-body">
+                        <h5 class="card-title">枇杷<span class="price">$106/一斤</span></h5>
+                        <p class="card-text">枇杷果肉柔軟多汁，帶有一絲酸甜的滋味。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '枇杷含有豐富的維生素A和抗氧化物質，是美容護膚的理想選擇。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-枇杷" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('枇杷', 106)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\水蜜桃(台農甜蜜桃).jpg" class="card-img-top" alt="水蜜桃(台農甜蜜桃)">
+                    <div class="card-body">
+                        <h5 class="card-title">水蜜桃(台農甜蜜桃)<span class="price">$129/一斤</span></h5>
+                        <p class="card-text">水蜜桃以其香甜多汁的口感而著稱，是夏季的清涼美食。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '水蜜桃富含纖維及多種礦物質，適合用於水果沙拉和甜品。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-水蜜桃(台農甜蜜桃)" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('水蜜桃(台農甜蜜桃)', 116)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="collapse" id="fruitsMore">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\玉荷包荔枝.jpg" class="card-img-top" alt="玉荷包荔枝">
+                        <div class="card-body">
+                            <h5 class="card-title">玉荷包荔枝<span class="price">$241/一斤</span></h5>
+                            <p class="card-text">玉荷包荔枝外殼鮮紅，果肉豐滿多汁，清甜爽口。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '玉荷包荔枝富含維生素C，是夏季的解暑佳品。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-玉荷包荔枝" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('玉荷包荔枝', 241)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\高接梨.jpg" class="card-img-top" alt="高接梨">
+                        <div class="card-body">
+                            <h5 class="card-title">高接梨<span class="price">$390/一顆</span></h5>
+                            <p class="card-text">高接梨肉質細膩、清脆多汁，是秋季的熱門水果。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '高接梨含有豐富的水分和鉀，是健康的水果選擇。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-高接梨" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('高接梨', 390)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\鳳梨.jpg" class="card-img-top" alt="鳳梨">
+                        <div class="card-body">
+                            <h5 class="card-title">鳳梨<span class="price">$49/一斤</span></h5>
+                            <p class="card-text">鳳梨具有熱帶水果的獨特酸甜風味，適合鮮食或入菜。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '鳳梨內含酵素，有助於促進消化及吸收。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-鳳梨" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('鳳梨', 49)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\梅.jpg" class="card-img-top" alt="梅">
+                        <div class="card-body">
+                            <h5 class="card-title">梅<span class="price">$99/一斤</span></h5>
+                            <p class="card-text">梅酸甜開胃，適合製作蜜餞或泡茶。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '梅富含天然有機酸，有助於促進食慾及養顏美容。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-梅" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('梅', 99)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\臍橙.jpg" class="card-img-top" alt="臍橙">
+                        <div class="card-body">
+                            <h5 class="card-title">臍橙<span class="price">$90/一斤</span></h5>
+                            <p class="card-text">臍橙果肉細膩，酸甜適中，是營養豐富的柑橘類水果。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '臍橙含有豐富的維生素C及膳食纖維，適合鮮食或榨汁。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-臍橙" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('臍橙', 90)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\晚崙西亞橙(香丁).jpg" class="card-img-top" alt="晚崙西亞橙(香丁)">
+                        <div class="card-body">
+                            <h5 class="card-title">晚崙西亞橙(香丁)<span class="price">$67/一斤</span></h5>
+                            <p class="card-text">香丁香氣濃郁，酸甜比例完美，適合夏日飲品。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '香丁富含抗氧化劑，有助於增強免疫系統和促進新陳代謝。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-晚崙西亞橙(香丁)" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('晚崙西亞橙(香丁)', 67)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\白柚.jpg" class="card-img-top" alt="白柚">
+                        <div class="card-body">
+                            <h5 class="card-title">白柚<span class="price">$53/一斤</span></h5>
+                            <p class="card-text">白柚清香多汁，酸中帶甜，是秋冬時節的佳品。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '白柚內含豐富的果膠和維生素B，有助於維持腸道健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-白柚" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('白柚', 53)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\文旦柚.jpg" class="card-img-top" alt="文旦柚">
+                        <div class="card-body">
+                            <h5 class="card-title">文旦柚<span class="price">$13/一斤</span></h5>
+                            <p class="card-text">文旦柚以厚實果肉和獨特香氣聞名，適合中秋節送禮。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '文旦柚含有高量的鉀，能促進體內鹽分平衡。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-文旦柚" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('文旦柚', 13)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\桶柑.jpg" class="card-img-top" alt="桶柑">
+                        <div class="card-body">
+                            <h5 class="card-title">桶柑<span class="price">$54/一斤</span></h5>
+                            <p class="card-text">桶柑皮薄多汁，口感清甜，是冬季水果的首選。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '桶柑的維生素C含量高，具有潤喉和養肺的作用。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-桶柑" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('桶柑', 54)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\百香果.jpg" class="card-img-top" alt="百香果">
+                        <div class="card-body">
+                            <h5 class="card-title">百香果<span class="price">$119/一斤</span></h5>
+                            <p class="card-text">百香果富含獨特的酸甜風味，可做果汁或甜點配料。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '百香果的維生素A和C含量高，有助於促進皮膚健康和增強視力。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-百香果" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('百香果', 119)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\波羅蜜.jpg" class="card-img-top" alt="波羅蜜">
+                        <div class="card-body">
+                            <h5 class="card-title">波羅蜜<span class="price">$38/一斤</span></h5>
+                            <p class="card-text">波羅蜜擁有濃郁的香氣，果肉甘甜多汁，富含營養。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '波羅蜜內含豐富的蛋白質及膳食纖維，是能量補充的好選擇。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-波羅蜜" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('波羅蜜', 38)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\紅龍果.jpg" class="card-img-top" alt="紅龍果">
+                        <div class="card-body">
+                            <h5 class="card-title">紅龍果<span class="price">$148/一斤</span></h5>
+                            <p class="card-text">紅龍果鮮紅的果肉口感柔滑，適合製作健康沙拉。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '紅龍果富含鐵及植物性抗氧化劑，有助於增強免疫力。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-紅龍果" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('紅龍果', 148)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\玉里大西瓜.jpg" class="card-img-top" alt="玉里大西瓜">
+                        <div class="card-body">
+                            <h5 class="card-title">玉里大西瓜<span class="price">$550/一顆</span></h5>
+                            <p class="card-text">玉里大西瓜汁多甘甜，是夏季解渴的最佳選擇。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '西瓜含有豐富的茄紅素和維生素A，有助於抗氧化和保護心臟健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-玉里大西瓜" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('玉里大西瓜', 550)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\秀姑巒溪大西瓜.jpg" class="card-img-top" alt="秀姑巒溪大西瓜">
+                        <div class="card-body">
+                            <h5 class="card-title">秀姑巒溪大西瓜<span class="price">$700/一顆</span></h5>
+                            <p class="card-text">秀姑巒溪大西瓜以清甜和爽脆著稱，深受消費者喜愛。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '其含有豐富的水分和鉀元素，能有效補充電解質。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-秀姑巒溪大西瓜" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('秀姑巒溪大西瓜', 700)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\鳳林西瓜.jpg" class="card-img-top" alt="鳳林西瓜">
+                        <div class="card-body">
+                            <h5 class="card-title">鳳林西瓜<span class="price">$600/一顆</span></h5>
+                            <p class="card-text">鳳林西瓜香甜多汁，果皮細薄，果肉鮮紅。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '西瓜的水分含量高，是夏日補水的理想水果。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-鳳林西瓜" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('鳳林西瓜', 600)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\果艷西瓜.jpg" class="card-img-top" alt="果艷西瓜">
+                        <div class="card-body">
+                            <h5 class="card-title">果艷西瓜<span class="price">$850/一顆</span></h5>
+                            <p class="card-text">果艷西瓜具有濃郁甜味，果肉鮮艷，適合家人共享。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '含有多種維生素和抗氧化物質，增強免疫系統。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-果艷西瓜" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('果艷西瓜', 850)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\木瓜.jpg" class="card-img-top" alt="木瓜">
+                        <div class="card-body">
+                            <h5 class="card-title">木瓜<span class="price">$164/一斤</span></h5>
+                            <p class="card-text">木瓜口感細膩，味道香甜，適合生食或入菜。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '木瓜內含木瓜酵素，有助於促進消化和皮膚健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-木瓜" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('木瓜', 164)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <button class="btn btn-view-more" data-toggle="collapse" data-target="#fruitsMore" onclick="scrollToSection('#fruits')">查看更多</button>
+    </div>
+
+        <!-- 蔬菜 -->
+        <h3 id="vegetables">蔬菜</h3>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\金針.jpg" class="card-img-top" alt="金針">
+                    <div class="card-body">
+                        <h5 class="card-title">金針<span class="price">$970/一斤</span></h5>
+                        <p class="card-text">金針花香味濃郁，是台灣常見的健康蔬菜。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '金針花富含鐵質，能幫助補血及促進新陳代謝。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-金針" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('金針', 970)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\洛神花.jpg" class="card-img-top" alt="洛神花">
+                    <div class="card-body">
+                        <h5 class="card-title">洛神花<span class="price">$92/一把</span></h5>
+                        <p class="card-text">洛神花鮮紅果實可用於製作花茶或果醬。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '洛神花含有豐富的抗氧化成分，有助於減緩衰老。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-洛神花" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('洛神花', 92)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\稻米.jpg" class="card-img-top" alt="稻米">
+                    <div class="card-body">
+                        <h5 class="card-title">稻米<span class="price">$95/一斤</span></h5>
+                        <p class="card-text">東部稻米口感Q彈，米香濃郁，是高品質主食選擇。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '部稻米內含豐富的碳水化合物，能提供充足的能量來源。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-稻米" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('稻米', 95)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\紅甘蔗.jpg" class="card-img-top" alt="紅甘蔗">
+                    <div class="card-body">
+                        <h5 class="card-title">紅甘蔗<span class="price">$17/一斤</span></h5>
+                        <p class="card-text">紅甘蔗甜度高，汁水豐富，適合鮮食或榨汁。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '紅甘蔗含有豐富的天然糖分及抗氧化劑，有助於補充能量。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-紅甘蔗" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('紅甘蔗', 17)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="collapse" id="vegetablesMore">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\山藥.jpg" class="card-img-top" alt="山藥">
+                        <div class="card-body">
+                            <h5 class="card-title">山藥<span class="price">$93/一斤</span></h5>
+                            <p class="card-text">山藥質地細膩，富含營養，是煲湯或燉菜的佳選。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '山藥含有黏多醣和維生素B群，有助於增強免疫力及腸胃健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-山藥" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('山藥', 93)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\山蘇.jpg" class="card-img-top" alt="山蘇">
+                        <div class="card-body">
+                            <h5 class="card-title">山蘇<span class="price">$271/一斤</span></h5>
+                            <p class="card-text">山蘇是一種野菜，質地脆嫩，清香可口。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '山蘇含有豐富的膳食纖維，能促進消化與排毒。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-山蘇" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('山蘇', 271)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\芋心蕃薯.jpg" class="card-img-top" alt="芋心蕃薯">
+                        <div class="card-body">
+                            <h5 class="card-title">芋心蕃薯<span class="price">$49/一斤</span></h5>
+                            <p class="card-text">芋心蕃薯甜度高且口感鬆軟，是健康主食的良好選擇。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '芋心蕃薯富含β胡蘿蔔素和膳食纖維，有助於促進心血管健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-芋心番薯" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('芋心番薯', 49)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\黃籐.jpg" class="card-img-top" alt="黃籐">
+                        <div class="card-body">
+                            <h5 class="card-title">黃籐<span class="price">$300/一斤</span></h5>
+                            <p class="card-text">黃籐是一種野生蔬菜，質地鮮嫩且富有彈性。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '黃籐含有豐富的維生素C，有助於增強免疫力。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-黃藤" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('黃藤', 330)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\紅糯米.jpg" class="card-img-top" alt="紅糯米">
+                        <div class="card-body">
+                            <h5 class="card-title">紅糯米<span class="price">$240/一斤</span></h5>
+                            <p class="card-text">紅糯米米粒呈紅色，糯性十足，是甜點的最佳原料。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '紅糯米含有豐富的鐵和抗氧化劑，有助於養血和抗衰老。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-紅糯米" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('紅糯米', 240)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\箭竹.jpg" class="card-img-top" alt="箭竹">
+                        <div class="card-body">
+                            <h5 class="card-title">箭竹<span class="price">$53/一斤</span></h5>
+                            <p class="card-text">箭竹嫩葉可食用，是少見的高山美味野菜。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '箭竹含有植物性蛋白質，適合作為蔬食料理的材料。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-箭竹" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('箭竹', 53)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\菱角.jpg" class="card-img-top" alt="菱角">
+                        <div class="card-body">
+                            <h5 class="card-title">菱角<span class="price">$110/一斤</span></h5>
+                            <p class="card-text">菱角口感酥脆，是傳統小吃中的常見食材。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '菱角含有豐富的蛋白質及礦物質，是低熱量高營養的食物。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-菱角" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('菱角', 110)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\芋頭.jpg" class="card-img-top" alt="芋頭">
+                        <div class="card-body">
+                            <h5 class="card-title">芋頭<span class="price">$56/一斤</span></h5>
+                            <p class="card-text">芋頭質地細滑，適合蒸煮或製作甜點。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '芋頭富含膳食纖維及鉀，有助於促進消化與心臟健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-芋頭" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('芋頭', 56)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\紅藜.jpg" class="card-img-top" alt="紅藜">
+                        <div class="card-body">
+                            <h5 class="card-title">紅藜<span class="price">$600/一斤</span></h5>
+                            <p class="card-text">台灣原住民傳統的糧食作物，多與稻米或芋頭一起煮食。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '富含膳食纖維及類黃酮抗氧化物，有助於維持心血管健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-紅藜" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('紅藜', 600)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-view-more" data-toggle="collapse" data-target="#vegetablesMore" onclick="scrollToSection('#vegetables')">查看更多</button>    
+        </div>
+
+        <!-- 魚類 -->
+        <h3 id="fish">魚類</h3>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\曼波魚.jpg" class="card-img-top" alt="曼波魚">
+                    <div class="card-body">
+                        <h5 class="card-title">曼波魚<span class="price">$186/一斤</span></h5>
+                        <p class="card-text">曼波魚以獨特的體型著稱，魚肉口感細緻且滑嫩。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '曼波魚富含膠原蛋白和低脂蛋白質，有助於皮膚健康及維持體型。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-曼波魚" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('曼波魚', 186)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\土托魚.jpeg" class="card-img-top" alt="土托魚">
+                    <div class="card-body">
+                        <h5 class="card-title">土托魚<span class="price">$420/一斤</span></h5>
+                        <p class="card-text">土托魚肉質鮮美，適合清蒸或紅燒。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '土托魚肉質鮮美，適合清蒸或紅燒。土托魚含有豐富的磷和維生素D，有助於骨骼及牙齒的健康。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-土托魚" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('土托魚', 420)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\馬加魚.jpg" class="card-img-top" alt="馬加魚">
+                    <div class="card-body">
+                        <h5 class="card-title">馬加魚<span class="price">$250/一斤</span></h5>
+                        <p class="card-text">馬加魚具有濃郁的海鮮風味，是日常烹飪的良好選擇。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '馬加魚富含Omega-3脂肪酸，有助於降低壞膽固醇和促進心血管健康。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-馬加魚" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('馬加魚', 250)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\鰆魚.jpg" class="card-img-top" alt="鰆魚">
+                    <div class="card-body">
+                        <h5 class="card-title">鰆魚<span class="price">$450/一斤</span></h5>
+                        <p class="card-text">鰆魚魚肉柔嫩，常用於燒烤或煎炸。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '鰆魚含有豐富的維生素B12和不飽和脂肪酸，增強神經系統功能。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-鰆魚" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('鰆魚', 450)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="collapse" id="fishMore">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\紅甘.jpg" class="card-img-top" alt="紅甘">
+                        <div class="card-body">
+                            <h5 class="card-title">紅甘<span class="price">$230/一斤</span></h5>
+                            <p class="card-text">紅甘魚肉厚實鮮甜，是壽司和刺身的高級食材。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '紅甘魚富含高蛋白及維生素D，適合成長期兒童食用。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-紅甘" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('紅甘', 230)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\魟魚.jpg" class="card-img-top" alt="魟魚">
+                        <div class="card-body">
+                            <h5 class="card-title">魟魚<span class="price">$100/一斤</span></h5>
+                            <p class="card-text">魟魚魚肉細膩，帶有彈性，是煮湯的上好材料。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '魟魚富含膠原蛋白及鈣質，有助於關節和骨骼健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-魟魚" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('魟魚', 100)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\海鱺.jpg" class="card-img-top" alt="海鱺">
+                        <div class="card-body">
+                            <h5 class="card-title">海鱺<span class="price">$870/一斤</span></h5>
+                            <p class="card-text">海鱺魚肉厚實，油脂豐富，適合各類烹飪方式。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '海鱺內含高量的Omega-3和維生素E，有助於抗炎和提升皮膚光澤。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-海鱺" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('海鱺', 870)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\甘仔魚.jpg" class="card-img-top" alt="甘仔魚">
+                        <div class="card-body">
+                            <h5 class="card-title">甘仔魚<span class="price">$240/一斤</span></h5>
+                            <p class="card-text">甘仔魚體型小巧，適合炸成酥魚或製作魚乾。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '甘仔魚富含鈣和鐵，是增強骨骼及促進造血的理想食品。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-甘仔魚" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('甘仔魚', 240)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\白帶魚.jpg" class="card-img-top" alt="白帶魚">
+                        <div class="card-body">
+                            <h5 class="card-title">白帶魚<span class="price">$112/一斤</span></h5>
+                            <p class="card-text">白帶魚以銀白色魚身著稱，肉質細膩，適合煎烤或燒湯。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '白帶魚含有豐富的不飽和脂肪酸，對心腦血管健康有益。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-白帶魚" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('白帶魚', 112)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\水針魚.jpg" class="card-img-top" alt="水針魚">
+                        <div class="card-body">
+                            <h5 class="card-title">水針魚<span class="price">$1800/一斤</span></h5>
+                            <p class="card-text">水針魚體型細長，魚肉鮮嫩，是海鮮拼盤中的常見品種。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '水針魚富含蛋白質和維生素A，促進肌肉修復和視力健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-水針魚" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('水針魚', 1800)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\南魷.jpg" class="card-img-top" alt="南魷">
+                        <div class="card-body">
+                            <h5 class="card-title">南魷<span class="price">$109/一隻</span></h5>
+                            <p class="card-text">南魷肉質Q彈，味道鮮美，是燒烤和涮鍋的佳選。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '南魷含有豐富的牛磺酸和胺基酸，有助於增強體力和提高免疫力。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-南魷" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('南魷', 109)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\飛魚.jpg" class="card-img-top" alt="飛魚">
+                        <div class="card-body">
+                            <h5 class="card-title">飛魚<span class="price">$528/一斤</span></h5>
+                            <p class="card-text">飛魚以飛翔能力聞名，魚肉鮮美，富有彈性。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '飛魚含有豐富的蛋白質及Omega-3脂肪酸，有助於增強腦部功能。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-飛魚" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('飛魚', 528)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\旗魚.jpg" class="card-img-top" alt="旗魚">
+                        <div class="card-body">
+                            <h5 class="card-title">旗魚<span class="price">$485/一片</span></h5>
+                            <p class="card-text">旗魚肉質細膩，適合燒烤或生魚片。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '旗魚富含高品質蛋白質和維生素D，有助於骨骼健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-旗魚" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('旗魚', 485)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\鮪魚.jpg" class="card-img-top" alt="鮪魚">
+                        <div class="card-body">
+                            <h5 class="card-title">鮪魚<span class="price">$313/一斤</span></h5>
+                            <p class="card-text">鮪魚為壽司中的經典魚類，肉質柔嫩且口感鮮美。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '鮪魚含有豐富的鐵及維生素B12，有助於造血及增強免疫力。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-鮪魚" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('鮪魚', 313)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\鬼頭刀.jpg" class="card-img-top" alt="鬼頭刀">
+                        <div class="card-body">
+                            <h5 class="card-title">鬼頭刀<span class="price">$360/一斤</span></h5>
+                            <p class="card-text">鬼頭刀魚肉香甜，是燒烤和煮湯的佳選。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '鬼頭刀魚含有高量的不飽和脂肪酸，能促進心血管健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-鬼頭刀" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('鬼頭刀', 360)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\柴魚.jpg" class="card-img-top" alt="柴魚">
+                        <div class="card-body">
+                            <h5 class="card-title">柴魚<span class="price">$280/一斤</span></h5>
+                            <p class="card-text">柴魚經過煙燻加工，是日式料理中的經典調味料。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '柴魚含有豐富的蛋白質和天然甘味素，提升菜餚鮮味。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-柴魚" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('柴魚', 280)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\油帶魚.jpg" class="card-img-top" alt="油帶魚">
+                        <div class="card-body">
+                            <h5 class="card-title">油帶魚<span class="price">$330/一斤</span></h5>
+                            <p class="card-text">油帶魚魚身修長，肉質細嫩，適合煎炸料理。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '油帶魚內含維生素A和E，有助於視力保健和皮膚健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-油帶魚" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('油帶魚', 330)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-view-more" data-toggle="collapse" data-target="#fishMore" onclick="scrollToSection('#fish')">查看更多</button>
+        </div>
+
+        <!-- 養殖魚 -->
+        <h3 id="farmingfish">養殖魚</h3>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\九孔.jpg" class="card-img-top" alt="九孔">
+                    <div class="card-body">
+                        <h5 class="card-title">九孔<span class="price">$600/一包</span></h5>
+                        <p class="card-text">九孔鮑肉質彈牙，味道鮮美，是高級食材。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '九孔內含豐富的鋅和鐵，能促進造血及增強免疫系統功能。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-九孔" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('九孔', 600)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\黃金蜆.jpg" class="card-img-top" alt="黃金蜆">
+                    <div class="card-body">
+                        <h5 class="card-title">黃金蜆<span class="price">$225/一包</span></h5>
+                        <p class="card-text">黃金蜆以清甜著稱，適合煮湯或清炒。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '黃金蜆含有大量胺基酸和肝醣，能促進肝臟健康。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-黃金蜆" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('黃金蜆', 225)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\吳郭魚.jpg" class="card-img-top" alt="吳郭魚">
+                    <div class="card-body">
+                        <h5 class="card-title">吳郭魚<span class="price">$48/一斤</span></h5>
+                        <p class="card-text">吳郭魚肉質細嫩，常見於家常蒸煮菜餚中。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '吳郭魚內含多種礦物質和蛋白質，是健康飲食的良好選擇。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-吳郭魚" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('吳郭魚', 48)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\蜆.jpg" class="card-img-top" alt="蜆">
+                    <div class="card-body">
+                        <h5 class="card-title">蜆<span class="price">$120/一包</span></h5>
+                        <p class="card-text">蜆肉鮮甜，適合煮湯或涼拌。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '蜆含有豐富的鐵和鋅，能有效促進血液循環及肝功能。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-蜆" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('蜆', 120)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 加工食品 -->
+        <h3 id="processed">加工食品</h3>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\福鹿茶.jpg" class="card-img-top" alt="福鹿茶">
+                    <div class="card-body">
+                        <h5 class="card-title">福鹿茶<span class="price">$990/一盒</span></h5>
+                        <p class="card-text">福鹿茶由多種草本植物精心調配，清香宜人。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '福鹿茶具有放鬆神經、促進消化的效果，是養生飲品的首選。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-福鹿茶" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('福鹿茶', 990)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\太峰茶.jpg" class="card-img-top" alt="太峰茶">
+                    <div class="card-body">
+                        <h5 class="card-title">太峰茶<span class="price">$3000/一盒
+                        </span></h5>
+                        <p class="card-text">太峰茶以高山茶葉為原料，茶香濃郁回甘。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '太峰茶富含茶多酚，有助於抗氧化及提升代謝。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-太峰茶" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('太峰茶', 3000)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\天鶴茶.jpg" class="card-img-top" alt="天鶴茶">
+                    <div class="card-body">
+                        <h5 class="card-title">天鶴茶<span class="price">$625/一罐</span></h5>
+                        <p class="card-text">天鶴茶採用獨特的烘焙工藝，口感圓潤順滑。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '天鶴茶含有天然氨基酸，有助於舒緩壓力並提升專注力。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-天鶴茶" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('天鶴茶', 625)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets\images\曼波香腸.webp" class="card-img-top" alt="曼波香腸">
+                    <div class="card-body">
+                        <h5 class="card-title">曼波香腸<span class="price">$116/一斤</span></h5>
+                        <p class="card-text">曼波香腸以曼波魚為主要材料，口感細緻滑嫩。</p>
+                        <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '曼波香腸低脂高蛋白，是健康飲食的創新選擇。')">閱讀更多</span></p>
+                        <div class="input-group mb-2">
+                            <input type="number" class="form-control quantity-input" id="quantity-曼波香腸" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-sm" onclick="addToCart('曼波香腸', 116)">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="collapse" id="processedMore">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\曼波魚丸.jpg" class="card-img-top" alt="曼波魚丸">
+                        <div class="card-body">
+                            <h5 class="card-title">曼波魚丸<span class="price">$230/一包</span></h5>
+                            <p class="card-text">曼波魚丸彈性十足，魚香濃郁，適合湯品和火鍋。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '曼波魚丸富含膠原蛋白，有助於促進肌膚修復與保濕。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-曼波魚丸" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('曼波魚丸', 230)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\麻糬.jpg" class="card-img-top" alt="麻糬">
+                        <div class="card-body">
+                            <h5 class="card-title">麻糬<span class="price">$199/一盒</span></h5>
+                            <p class="card-text">麻糬口感軟糯，內餡甜美，是台灣經典甜點。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '麻糬以糯米製成，富含碳水化合物，能提供快速能量補充。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-麻糬" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('麻糬', 199)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\雷古多.jpg" class="card-img-top" alt="雷古多">
+                        <div class="card-body">
+                            <h5 class="card-title">雷古多<span class="price">$390/一盒</span></h5>
+                            <p class="card-text">雷古多是以天然果實製成的健康零食，香脆可口。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '雷古多富含纖維及抗氧化劑，是日常能量補充的良好選擇。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-雷古多" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('雷古多', 390)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\花蓮薯.jpg" class="card-img-top" alt="花蓮薯">
+                        <div class="card-body">
+                            <h5 class="card-title">花蓮薯<span class="price">$139/一盒</span></h5>
+                            <p class="card-text">花蓮薯外皮金黃酥脆，內餡香甜綿密，是深受歡迎的土特產。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '花蓮薯富含天然澱粉和糖分，是下午茶點心的不二之選。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-花蓮薯" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('花蓮薯', 139)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\菩提酥.jpg" class="card-img-top" alt="菩提酥">
+                        <div class="card-body">
+                            <h5 class="card-title">菩提酥<span class="price">$250/一盒</span></h5>
+                            <p class="card-text">菩提酥酥脆香濃，口感層次豐富，適合作為伴手禮。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '菩提酥內含多種堅果和奶香，富含健康脂肪和蛋白質。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-菩提酥" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('菩提酥', 250)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\漂流木餅.jpg" class="card-img-top" alt="漂流木餅">
+                        <div class="card-body">
+                            <h5 class="card-title">漂流木餅<span class="price">$420/一盒</span></h5>
+                            <p class="card-text">漂流木餅造型獨特，外酥內軟，口感香甜濃郁。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '此餅內含豐富的堅果碎與蜂蜜，提供高能量及美味享受。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-漂流木餅" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('漂流木餅', 420)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\紅玉火龍餅.jpg" class="card-img-top" alt="紅玉火龍餅">
+                        <div class="card-body">
+                            <h5 class="card-title">紅玉火龍餅<span class="price">$300/一盒</span></h5>
+                            <p class="card-text">紅玉火龍餅融合火龍果的鮮甜風味與酥餅的香氣。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '此餅富含纖維及抗氧化物質，是健康與美味的結合。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-紅玉火龍餅" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('紅玉火龍餅', 300)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\郭火腿.webp" class="card-img-top" alt="郭火腿">
+                        <div class="card-body">
+                            <h5 class="card-title">郭火腿<span class="price">$600/一斤</span></h5>
+                            <p class="card-text">郭火腿鹹香適口，適合製作三明治或搭配沙拉。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '郭火腿富含蛋白質及磷，有助於增強肌肉及骨骼健康。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-郭火腿" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('郭火腿', 600)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\剝皮辣椒.jpg" class="card-img-top" alt="剝皮辣椒">
+                        <div class="card-body">
+                            <h5 class="card-title">剝皮辣椒<span class="price">$180/一罐
+                            </span></h5>
+                            <p class="card-text">剝皮辣椒香辣可口，是台灣經典的小菜配料。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '剝皮辣椒內含天然辣素，能促進新陳代謝並增加食慾。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-剝皮辣椒" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('剝皮辣椒', 180)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\酸菜.jpg" class="card-img-top" alt="酸菜">
+                        <div class="card-body">
+                            <h5 class="card-title">酸菜<span class="price">$69/一包</span></h5>
+                            <p class="card-text">酸菜味道酸爽，適合作為火鍋或炒菜的佐料。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '酸菜富含乳酸菌，有助於腸道健康及消化功能。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-酸菜" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('酸菜', 69)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="assets\images\紅藜醬油.jpg" class="card-img-top" alt="紅藜醬油">
+                        <div class="card-body">
+                            <h5 class="card-title">紅藜醬油<span class="price">$380/一瓶</span></h5>
+                            <p class="card-text">紅藜醬油以紅藜為原料，鹹香帶甜，適合各類烹調。</p>
+                            <p class="card-text text-muted">詳細介紹：<span class="read-more" onclick="toggleReadMore(this, '紅藜醬油富含胺基酸及多酚，有助於提升菜餚的風味與營養。')">閱讀更多</span></p>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control quantity-input" id="quantity-紅藜醬油" value="1" min="1" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-sm" onclick="addToCart('紅藜醬油', 380)">加入購物車</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-view-more" data-toggle="collapse" data-target="#processedMore" onclick="scrollToSection('#processed')">查看更多</button>
+        </div>
+    </div>
+
+
+    <!-- 回到頂部按鈕 -->
+    <button id="backToTop" title="回到頂部">↑</button>
+
+    <footer class="text-center py-3">
+        <p>© 2024 東部農產網 | 聯絡我們: support@eastshop.tw</p>
+    </footer>
+    <!-- 引入 Bootstrap 和 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js\categories.js"></script>
+</body>
+</html>

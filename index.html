@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東部農產網</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css\index.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">東部農產網</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        首頁
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="homeDropdown">
+                        <a class="dropdown-item" href="#intro">簡介</a>
+                        <a class="dropdown-item" href="#source">產品來源</a>
+                        <a class="dropdown-item" href="#categories">商品分類</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        商品分類
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                        <a class="dropdown-item" href="categories.html#fruits">水果</a>
+                        <a class="dropdown-item" href="categories.html#vegetables">蔬菜</a>
+                        <a class="dropdown-item" href="categories.html#fish">魚類</a>
+                        <a class="dropdown-item" href="categories.html#farmingfish">養殖魚</a>
+                        <a class="dropdown-item" href="categories.html#processed">加工食品</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="activities.html">最新活動</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.html">購物車</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 輪播圖 -->
+    <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets\images\台東慢食節.png" class="d-block w-100" alt="活動1">
+            </div>
+            <div class="carousel-item">
+                <img src="assets\images\富里鄉第六屆稻草藝術季.jpg" class="d-block w-100" alt="活動2">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <!-- 簡介部分 -->
+    <div id="intro" class="intro-section">
+        <h2>關於我們</h2>
+        <p>東部農產網致力於提供高品質的農產品，直接來自農夫，保證新鮮、健康、無毒。</p>
+    </div>
+
+    <!-- 產品來源部分 -->
+    <div id="source" class="intro-section">
+        <h2>產品來源</h2>
+        <p>我們的產品來自於台灣東部地區，包含花蓮、台東，採用最自然的方式種植和捕撈，減少對環境的影響。</p>
+    </div>
+
+    <!-- 商品分類區 -->
+    <div id="categories" class="container my-5">
+        <h2 class="text-center mb-4">商品分類</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <a href="categories.html#fruits" class="btn btn-outline-success btn-lg w-100 product-category">水果</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="categories.html#vegetables" class="btn btn-outline-success btn-lg w-100 product-category">蔬菜</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="categories.html#fish" class="btn btn-outline-success btn-lg w-100 product-category">魚類</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="categories.html#farmingfish" class="btn btn-outline-success btn-lg w-100 product-category">養殖魚</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="categories.html#processed" class="btn btn-outline-success btn-lg w-100 product-category">加工食品</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 回到頂部按鈕 -->
+    <button id="backToTop" title="回到頂部">↑</button>
+
+    <!-- 頁尾 -->
+    <footer class="text-center py-3">
+        <p>© 2024 東部農產網 | 聯絡我們: support@eastshop.tw</p>
+    </footer>
+
+    <!-- 引入 Bootstrap 和 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="css\index.css"></script>    
+</body>
+</html>

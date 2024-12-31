@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>農遊年曆活動頁面</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/activities.css">
+</head>
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">東部農產網</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        商品分類
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                        <a class="dropdown-item" href="categories.html#fruits">水果</a>
+                        <a class="dropdown-item" href="categories.html#vegetables">蔬菜</a>
+                        <a class="dropdown-item" href="categories.html#fish">魚類</a>
+                        <a class="dropdown-item" href="categories.html#farmingfish">養殖魚</a>
+                        <a class="dropdown-item" href="categories.html#processed">加工食品</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="activities.html">最新活動</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.html">購物車</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 月曆區域 -->
+    <div class="calendar-container text-center">
+        <div class="calendar btn-group" role="group" aria-label="月份選擇">
+            <button class="btn btn-outline-success" data-month="1">一月</button>
+            <button class="btn btn-outline-success" data-month="2">二月</button>
+            <button class="btn btn-outline-success" data-month="3">三月</button>
+            <button class="btn btn-outline-success" data-month="4">四月</button>
+            <button class="btn btn-outline-success" data-month="5">五月</button>
+            <button class="btn btn-outline-success" data-month="6">六月</button>
+            <button class="btn btn-outline-success" data-month="7">七月</button>
+            <button class="btn btn-outline-success" data-month="8">八月</button>
+            <button class="btn btn-outline-success" data-month="9">九月</button>
+            <button class="btn btn-outline-success" data-month="10">十月</button>
+            <button class="btn btn-outline-success" data-month="11">十一月</button>
+            <button class="btn btn-outline-success active" data-month="12">十二月</button>
+        </div>
+    </div>
+
+    <!-- 活動卡片區域 -->
+    <div class="container my-4">
+        <div class="row" id="eventsContainer">
+            <!-- 活動卡片動態生成 -->
+        </div>
+
+        <!-- 活動詳情區域 -->
+        <div id="eventDetail" class="card mt-4">
+            <div class="card-body">
+                <button class="btn btn-secondary mb-3" id="backToEvents">返回活動列表</button>
+                <div id="eventContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 回到頂部按鈕 -->
+    <button id="backToTop" title="回到頂部">↑</button>
+
+    <footer>
+        <p>© 2024 農遊年曆. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/activities.js"></script>
+</body>
+</html>
